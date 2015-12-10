@@ -67,5 +67,11 @@ for($i=0 ;$i<10 ;$i++){
 //strlen($nome) --> 6
 //$nome[strlen($nome)-1] --> per individuare l'ultimo carattere della stringa
 
+//Funzioni: servono per implementare un'operazione comune che ci serve in diversi punti del programma. per definire una funzione si usa: function nome della funzione (1 o + $var){, si usa return per stampare il risultato; Es: 
+//function aggiungi uno ($var){
+//$var++; 
+//return $var;
+//{
+
 
 ?>	
