@@ -83,4 +83,4 @@ foreach ($dizionario as $i=>$el){
 echo $i ."-".$el . "<br>";
 
 }
-	
+?>	
