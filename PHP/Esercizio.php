@@ -54,5 +54,11 @@ echo "<br>";
 
 echo"l'array contiene "   .count($lista).  " elementi";
 
+//ciclo for contiene 3 elementi separati dal ; for (...;...;...;){
+
+for($i=0 ;$i<10 ;$i++){
+
+//echo $i; =compaiono risultati da 0 a 9
+
 
 ?>	
