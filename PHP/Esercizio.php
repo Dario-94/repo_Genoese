@@ -59,6 +59,13 @@ echo"l'array contiene "   .count($lista).  " elementi";
 for($i=0 ;$i<10 ;$i++){
 
 //echo $i; =compaiono risultati da 0 a 9
+//echo $i++ =aumenta sempre di uno
+
+
+//$nome="andrea";
+//$nome[3] --> "r"
+//strlen($nome) --> 6
+//$nome[strlen($nome)-1] --> per individuare l'ultimo carattere della stringa
 
 
 ?>	
