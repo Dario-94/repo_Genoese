@@ -60,6 +60,11 @@ SELECT nome, cognome, data_nascita, day(data_nascita) AS "day", month(data_nasci
 
 SELECT nome, cognome, data_nascita, day(data_nascita) AS "day", month(data_nascita) AS "month", year(data_nascita) AS "year", dayname (data_nascita) AS "dayname", monthname (data_nascita) AS "monthname", right((data_nascita),5) FROM utente WHERE right((data_nascita),5) BETWEEN "03-21" AND "06-20";
 
+----------------------------------------------------------------------------------------------------------
+
+SELECT nome, cognome, data_nascita, date_format(data_nascita, "%d/%m/%Y") AS "Formato italiano" FROM utente;
+
+
 
 
 

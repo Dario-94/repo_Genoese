@@ -64,6 +64,11 @@ SELECT nome, cognome, data_nascita, day(data_nascita) AS "day", month(data_nasci
 
 SELECT nome, cognome, data_nascita, date_format(data_nascita, "%d/%m/%Y") AS "Formato italiano" FROM utente;
 
+----------------------------------------------------------------------------------------------------------
+
+SELECT nome, cognome, data_nascita, timestampdiff(YEAR, data_nascita,CURDATE()) AS "AGE" FROM utente;
+
+
 
 
 
