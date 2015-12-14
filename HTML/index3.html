@@ -116,12 +116,65 @@ a:hover{
 .sfumato{
 	height:200px;
 	background:red;
-	background:linear-gradient(red, yellow, green)
+	background:linear-gradient(red, yellow, green);
+	clear:left;
 }
+
+p.sotto{
+	clear:right;
+}
+
+/*creare galleria immagini*/
+
+.gallery{
+	width:180px;
+ 	border:2px solid red;
+	margin:4px;
+	float:left;
+}
+
+.gallery img{
+	width:100%;
+	height:auto;
+}
+
+.gallery img:hover{
+ 	opacity:0.5; 
+	border:1px solid yellow; 
+}
+
+.didascalia{
+	padding:15px;
+	text-align:center;
+}
+
+.imgsx{
+	float:left;
+	clear:left;
+}
+
+.asd5{
+	float:left;
+	clear:left;
+}
+
 </style>
 </head>
 
 <body>
+
+<div class="gallery">
+<a href="Images/fiordi.jpg" target="_blank">
+<img src="Images/fiordi.jpg" width="300" height="200" />
+</a>
+<div class="didascalia">Fiordi norvegesi</div>
+</div>
+<div class="gallery">
+<a href="Images/fiordi.jpg" target="_blank">
+<img src="Images/fiordi.jpg" width="300" height="200" />
+</a>
+<div class="didascalia">Fiordi norvegesi</div>
+</div>
 <div class="sfumato">qui box sfumato</div>
 <br />
 <br />
@@ -147,6 +200,11 @@ a:hover{
 <div class="box"> 
 <img src="Images/immagine.png" />
 </div>
+<br />
+<br />
+
+<img class="imgsx" src="Images/fiordi.jpg" >
+<p class="asd5">testo testo</p>
 </body>
 
 
