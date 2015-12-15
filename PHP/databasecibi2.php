@@ -1,5 +1,5 @@
 <html>
-	<form method="get">
+	<form method="post">
 		<input type="text" name="cibo"/>
 		<input type="submit" value="cerca"/>
 	</form>
@@ -8,8 +8,8 @@
 
 	include "databasecibi.php";
 
-	if(isset($_GET["cibo"])) {
-		$cibo=$_GET["cibo"];
+	if(isset($_POST["cibo"])) {
+		$cibo=$_POST["cibo"];
 
 	if (isset($cibieingredienti[$cibo])) {
 		echo $cibieingredienti [$cibo];
@@ -25,5 +25,6 @@
 
 //if isset serve per il controllo del programma.
 //doppio apice interpreta la variabile all'interno.
-//apice singolo non interpreta la variabile. 
+//apice singolo non interpreta la variabile.
+//con post nasconde i parametri dall'url mentre col get li visualizza. 
 ?>
