@@ -8,6 +8,11 @@ Un oggetto è una struttura che contiene:
 
 Definire una classe
 
+Concetti fondamentali:
+-dati e funzioni
+-new per instanziare un oggetto
+-> per accedere a una proprietà oppure per richiamare un metodo, se il nome ha le parentesi è un metodo
+$this, all'interno di un metodo,serve ad acceder alle proprietà e ai metodi dell'oggetto su cui il metodo è stato chiamato.
 
 <?php
 	//classe solo con proprietà 
