@@ -13,6 +13,8 @@ Concetti fondamentali:
 -new per instanziare un oggetto
 -> per accedere a una proprietà oppure per richiamare un metodo, se il nome ha le parentesi è un metodo
 $this, all'interno di un metodo,serve ad acceder alle proprietà e ai metodi dell'oggetto su cui il metodo è stato chiamato.
+extends per creare una classe derivata da una classe esistente
+parent:: per richiamare un metodo della classe padre
 
 <?php
 	//classe solo con proprietà 
