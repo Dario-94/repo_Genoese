@@ -72,6 +72,14 @@ SELECT nome, cognome, data_nascita, timestampdiff(YEAR, data_nascita,CURDATE()) 
 
 INSERT into giocatore VALUES(NULL, "Aguero", "Sergio Leonel", "1988-06-02", "1.72", "69", "D", "Argentina"); inserire dei valori all'interno di una tabella;
 
+----------------------------------------------------------------------------------------------------------
+
+UPDATE allievo SET login="NSR94", password=MD5("ajeje") WHERE id=10; modificare i dati di una tabella ovvero login e password;
+
+----------------------------------------------------------------------------------------------------------
+
+
+
 
 
 

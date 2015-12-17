@@ -68,6 +68,11 @@ SELECT nome, cognome, data_nascita, date_format(data_nascita, "%d/%m/%Y") AS "Fo
 
 SELECT nome, cognome, data_nascita, timestampdiff(YEAR, data_nascita,CURDATE()) AS "AGE" FROM utente;
 
+----------------------------------------------------------------------------------------------------------
+
+INSERT into giocatore VALUES(NULL, "Aguero", "Sergio Leonel", "1988-06-02", "1.72", "69", "D", "Argentina"); inserire dei valori all'interno di una tabella;
+
+
 
 
 
