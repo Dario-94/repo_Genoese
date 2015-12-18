@@ -38,4 +38,39 @@
 			
 		}
 
+	class Animale {
+		public $nome;
+		const NZAMPE=0;
+
+		public function verso() {
+			return "non so...";
+		}
+}
+
+
+		class Cane extends Animale {
+			const NZAMPE=
+			public function verso() {
+			
+		}
+}
+
+		class Papero extends Animale {
+			const NZAMPE=
+			public function verso() {
+			
+		}
+}
+		
+		class Pesce extends Animale {
+			public function verso() {
+			
+		}
+
+}
+
+
+
+
+
 ?>
