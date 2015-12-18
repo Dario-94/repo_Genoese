@@ -1,9 +1,9 @@
 <?php
-	include "libreria_classi2.php"
+	include "libreria_classi2.php";
 	
-	function presenta($animale) {
+	function presenta($animale){
 		$r="Sono " . $animale->nome;
-		$r.="<br/>ho " . $animale->NZAMPE ."zampe";
+		$r.="<br/>ho " . $animale::NZAMPE ."zampe";
 		$r.="<br/>" . $animale->verso();
 
 		return $r;
