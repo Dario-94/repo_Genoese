@@ -18,26 +18,29 @@
 }
 
 .menu{
-	margin:10px;
 	color:black;
 	list-style-type:none;
 	text-align:center;
 }
 
 .menu li{
-	margin:0;
-	border-right:4px solid black;
+	position:relative;
+	top:-5px;
+	margin:-3px;
+	border-left:6px solid #59FF45;
+	border-right:4px solid white;
 	display:inline;
-	padding:10px;
-	background-color:yellow;
+	padding:15px;
+	background-color:#D630FF;
 }
 
 .menu li:hover{
-	background-color:green;
+	background-color:#59FF45;
 }
 
 .menu li a{
-	color:red;
+	font-size:20px;
+	color:white;
 	font-weight:bold;
 	text-decoration:none;
 }
@@ -65,7 +68,7 @@
 .footer{
 	height:80px;
 	background-color:black;
-	color:white;
+	color:#D630FF;
 	font-size:14px;
 	text-align:center;
 	font-weight:bold;
