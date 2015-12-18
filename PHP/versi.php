@@ -33,24 +33,21 @@
 		echo "<br/><br/>";
 	}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ?>
+
+class ruota{
+	public $pressione;
+}
+
+class Automobile {
+	function __construct() {
+		$this->ruotaAD=new Ruota();
+		...
+}
+
+	public $ruotaAD;
+	public $ruotaAS;
+	public $ruotaPD;
+	public $ruotaPS;
+
+-> ti tira fuori la proprietà classe che vai a definire.

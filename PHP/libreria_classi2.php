@@ -32,5 +32,9 @@
 
 }
 
+//costanti tutte maiuscole
+//nomi delle classi con iniziale maiuscola
+//nomi di variabili metodi ecc. iniziano con le minuscole
+
 ?>
 
