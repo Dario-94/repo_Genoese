@@ -19,24 +19,30 @@
 
 .menu{
 	margin:10px;
-	font-size:18px;
 	color:black;
 	list-style-type:none;
+	text-align:center;
 }
 
 .menu li{
+	margin:0;
+	border-right:4px solid black;
 	display:inline;
 	padding:10px;
 	background-color:yellow;
 }
 
+.menu li:hover{
+	background-color:green;
+}
+
 .menu li a{
 	color:red;
 	font-weight:bold;
+	text-decoration:none;
 }
 
 .menu li a:hover{
-	color:blue;
 	text-decoration:none;
 	
 }
@@ -63,10 +69,23 @@
 	font-size:14px;
 	text-align:center;
 	font-weight:bold;
+	padding:5px;	
+}
+
+.footer a{
+	text-decoration:none;	
+}
+
+.footer a:hover{
+	color:red;
 }
 
 .asd{
 	position:relative;
+	left:-20px;	
 }
 
-
+.asd2{
+	position:relative;
+	right:-10px;	
+}
