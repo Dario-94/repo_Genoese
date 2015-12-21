@@ -18,25 +18,34 @@
 }
 
 .menu{
-	margin:10px;
-	font-size:18px;
 	color:black;
 	list-style-type:none;
+	text-align:center;
 }
 
 .menu li{
+	position:relative;
+	top:-5px;
+	margin:-3px;
+	border-left:6px solid #59FF45;
+	border-right:4px solid white;
 	display:inline;
-	padding:10px;
-	background-color:yellow;
+	padding:15px;
+	background-color:#D630FF;
+}
+
+.menu li:hover{
+	background-color:#59FF45;
 }
 
 .menu li a{
-	color:red;
+	font-size:20px;
+	color:white;
 	font-weight:bold;
+	text-decoration:none;
 }
 
 .menu li a:hover{
-	color:blue;
 	text-decoration:none;
 	
 }
@@ -57,16 +66,27 @@
 }
 
 .footer{
-	height:80px;
+	height:40px;
 	background-color:black;
-	color:white;
+	color:#D630FF;
 	font-size:14px;
 	text-align:center;
 	font-weight:bold;
+	padding:5px;	
+}
+
+.footer a:hover{
+	color:red;
 }
 
 .asd{
 	position:relative;
+	top:10px;
+	left:-25px;
 }
 
-
+.asd2{
+	position:relative;
+	top:10px;
+	left:25px;
+}
