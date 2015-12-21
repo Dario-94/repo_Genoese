@@ -27,7 +27,7 @@
 	position:relative;
 	top:-5px;
 	margin:-3px;
-	border-left:6px solid #59FF45;
+	border-left:10px solid #59FF45;
 	border-right:4px solid white;
 	display:inline;
 	padding:15px;
@@ -36,6 +36,14 @@
 
 .menu li:hover{
 	background-color:#59FF45;
+}
+
+.menu li.active{
+	background-color:#59FF45;
+}
+
+.menu li.active:hover{
+	background-color:#D630FF
 }
 
 .menu li a{
