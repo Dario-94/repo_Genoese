@@ -1,0 +1,55 @@
+ul{
+	list-style:none;
+}
+
+.navigation li a {
+	width:130px;
+	background-color:red;
+	float:left;
+	text-align:center;
+	text-decoration:none;
+	padding-top:10px;
+	padding-bottom:10px;
+	margin:2px;
+	list-style:none;
+	color:white;
+}
+
+.navigation li a:hover{
+	text-decoration:underline;
+	background-color:orange;
+}
+
+.navigation li:hover ul{
+	display:block;
+}
+
+.dropdown-nav{
+	position:absolute;
+	top:70px;
+	display:none;
+}
+
+.dropdown-nav.uno{
+	margin-top:-5px;
+	left:148px;
+	top:55px;
+}
+
+.dropdown-nav.due{
+	left:280px;
+	top:55px;
+	margin-top:-5px;
+}
+
+.dropdown-nav.tre{
+	left:414px;
+	top:55px;
+	margin-top:-5px;
+}
+
+.dropdown-nav.quattro{
+	left:548px;
+	top:55px;
+	margin-top:-5px;
+}
