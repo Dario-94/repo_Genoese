@@ -84,6 +84,20 @@ SELECT regione.nome AS Regione, provincia.nome AS Provincia, provincia.sigla AS 
 
 Assegnare il proprio giocatore alla relativa squadra: Update giocatore set squadra=.. where id=..
 
+----------------------------------------------------------------------------------------------------------
+
+Estrarre squadra con giocatori o senza giocatori: SELECT squadra.nome AS Squadra, squadra.citta AS Citta, giocatore.nome AS Nome_Giocatore, giocatore.cognome AS Cognome_Giocatore, giocatore.altezza AS Altezza, giocatore.peso AS Peso FROM squadra LEFT JOIN giocatore ON giocatore.squadra = squadra.id ORDER BY Squadra, Cognome_Giocatore;
+
+----------------------------------------------------------------------------------------------------------
+
+Estrarre tutti i giocatori e le squadra dove eventualmente giocano. 
+1- usando LEFT JOIN
+2- usando RIGHT JOIN:
+
+1-SELECT giocatore.nome AS Nome_Giocatore, giocatore.cognome AS Cognome_Giocatore, squadra.nome AS Nome_Squadra, squadra.citta AS Citta_Squadra FROM giocatore LEFT JOIN squadra ON giocatore.squadra = squadra.id ORDER BY squadra, cognome;
+
+2-SELECT giocatore.nome, giocatore.cognome, squadra.nome, squadra.citta FROM giocatore RIGHT JOIN squadra ON giocatore.squadra = squadra.id;
+
 
 
 
