@@ -20,6 +20,10 @@ ul{
 	background-color:orange;
 }
 
+.navigation ul a:hover{
+	border:4px solid #000;
+}
+
 .navigation li:hover ul{
 	display:block;
 }
@@ -33,23 +37,23 @@ ul{
 .dropdown-nav.uno{
 	margin-top:-5px;
 	left:148px;
-	top:55px;
+	top:53px;
 }
 
 .dropdown-nav.due{
 	left:280px;
-	top:55px;
+	top:53px;
 	margin-top:-5px;
 }
 
 .dropdown-nav.tre{
 	left:414px;
-	top:55px;
+	top:53px;
 	margin-top:-5px;
 }
 
 .dropdown-nav.quattro{
 	left:548px;
-	top:55px;
-	margin-top:-5px;
+	top:53px;
+	margin-top:-5px;	
 }
