@@ -80,7 +80,9 @@ UPDATE allievo SET login="NSR94", password=MD5("ajeje") WHERE id=10; modificare 
 
 SELECT regione.nome AS Regione, provincia.nome AS Provincia, provincia.sigla AS sigla_provincia, provincia.abitanti AS abitanti_provincia, provincia.superficie AS superficie_provincia, provincia.comuni FROM regione JOIN provincia ON provincia.regione = regione.id; Estrarre dati di provincie e regioni di appartenenza più sigla e dati geografici.
 
+----------------------------------------------------------------------------------------------------------
 
+Assegnare il proprio giocatore alla relativa squadra: Update giocatore set squadra=.. where id=..
 
 
 
