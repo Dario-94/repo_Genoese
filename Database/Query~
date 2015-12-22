@@ -94,7 +94,7 @@ Estrarre tutti i giocatori e le squadra dove eventualmente giocano.
 1- usando LEFT JOIN
 2- usando RIGHT JOIN:
 
-1-SELECT giocatore.nome, giocatore.cognome, squadra.nome, squadra.citta FROM giocatore LEFT JOIN squadra ON giocatore.squadra = squadra.id;
+1-SELECT giocatore.nome AS Nome_Giocatore, giocatore.cognome AS Cognome_Giocatore, squadra.nome AS Nome_Squadra, squadra.citta AS Citta_Squadra FROM giocatore LEFT JOIN squadra ON giocatore.squadra = squadra.id ORDER BY squadra, cognome;
 
 2-SELECT giocatore.nome, giocatore.cognome, squadra.nome, squadra.citta FROM giocatore RIGHT JOIN squadra ON giocatore.squadra = squadra.id;
 
