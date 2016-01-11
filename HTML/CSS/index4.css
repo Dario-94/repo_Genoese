@@ -50,3 +50,51 @@ body{
 	display:inline;
 	float:center;
 }
+
+#navcontainer ul li a{
+	text-decoration:none;
+	color:#999999;
+	padding:17px 30px;
+	border-right:1px solid #333333;
+	text-transform:uppercase;
+}
+
+#navcontainer ul li a:hover{
+	background:url(Images/menuactive.jpg) repeat-x;
+}
+
+#navcontainer #active a{
+	background:url(Images/menuactive.jpg) repeat-x;
+}
+
+#threeBoxes{
+	padding:15px;
+	margin-left:65px;
+}
+
+h2{
+	color:red;
+	padding:10px 0 20px 0;
+}
+
+.box{
+	background-color:#D3D3D3;
+	float:left;
+	width:25%;
+	padding:10px 35px;
+}
+
+.buttonLink{
+	background:red;
+	color:white;
+	padding:5px 10px;
+	margin:10px 0;
+	text-decoration:none;
+	display:inline-block;
+}
+
+h3{
+	color:red;
+	padding:10px 0 20px 0;
+}
+
