@@ -1,4 +1,4 @@
-<html>
+<!--<html>
 	<form method="get">
 		<input name="price" type="text"></input>
 		<input name="tax" type="text"></input>
@@ -6,7 +6,7 @@
 		<input type="submit"/>
 	</form>
 </html>
-
+-->
 <?php
 
 //function iva($a, $b) {
@@ -70,7 +70,9 @@ public function modulo() {
 
 /*Istanzio nuovo oggetto di classe Numero*/
 $a = new Numero(-5);
-$b = new Numero(100);
+$b = new Numero(10);
 
 /*eseguo modulo sull'oggetto di tipo numero*/
 echo $a->modulo();
+
+?>
