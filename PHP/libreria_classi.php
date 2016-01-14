@@ -49,7 +49,7 @@
 
 
 		class Cane extends Animale {
-			const NZAMPE=
+			const NZAMPE=;
 			public function verso() {
 			
 		}
@@ -68,9 +68,3 @@
 		}
 
 }
-
-
-
-
-
-?>
