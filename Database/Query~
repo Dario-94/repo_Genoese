@@ -103,16 +103,27 @@ Estrarre tutti i giocatori e le squadra dove eventualmente giocano.
 Iscrizione ad un corso:
 INSERT INTO iscrizione VALUES (NULL, 1, 10, "2015-12-22", NULL);
 
-----------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------
 
 Estrarre la lista delle iscrizioni:
 SELECT corso.titolo AS Titolo_Corso, allievo.cognome AS Cognome_Allievo, allievo.nome AS Nome_Allievo, iscrizione.data_iscrizione AS Data_Iscrizione FROM iscrizione JOIN allievo ON iscrizione.allievo = allievo.id JOIN corso ON iscrizione.corso = corso.id;
 
 ----------------------------------------------------------------------------------------------------------
 
+Estrarre la lista delle stazioni e dei rispettivi tornelli: 
+SELECT  stazione.nome, tornello.numero FROM tornello JOIN stazione ON tornello.stazione = stazione.id;
 
+----------------------------------------------------------------------------------------------------------
 
+Estrarre cognome, nome, date di validità degli abbonamenti:
+SELECT utente.cognome AS Cognome, utente.nome AS Nome, abbonamento.dal AS Inizio_validita, abbonamento.al AS Fine_validita FROM abbonamento JOIN utente ON abbonamento.utente = utente.id ORDER BY Cognome;
 
+----------------------------------------------------------------------------------------------------------
+
+Query per il controllo dell'abbonamento:
+SELECT COUNT(*) FROM abbonamento WHERE abbonamento.id = 2 and "2014-10-21" between dal and al;
+
+----------------------------------------------------------------------------------------------------------
 
 
 

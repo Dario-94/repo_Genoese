@@ -120,6 +120,14 @@ SELECT utente.cognome AS Cognome, utente.nome AS Nome, abbonamento.dal AS Inizio
 
 ----------------------------------------------------------------------------------------------------------
 
+Query per il controllo dell'abbonamento:
+SELECT COUNT(*) FROM abbonamento WHERE abbonamento.id = 2 and "2014-10-21" between dal and al;
+
+----------------------------------------------------------------------------------------------------------
+
+Numero di accessi dalla stazione XVIII Dicembre:
+SELECT count(*) FROM accesso JOIN tornello ON accesso.tornello = tornello.id WHERE tornello.stazione = 12
+
 
 
 
