@@ -7,4 +7,6 @@ function ribaltastringa ($nome){
 }
   return $r;
 }
+
+		
 ?>
