@@ -98,3 +98,52 @@ h3{
 	padding:10px 0 20px 0;
 }
 
+.contentsx{
+	float:left;
+	width:600px;
+	padding:10px 35px;
+	text-align:justify;
+}
+
+.imgsx{
+	float:left;
+	padding: 2px 20px 10px 2px;
+}
+
+.links{
+	margin-left:600px;
+	padding:10px 35px;
+}
+
+.links li {
+	display:block;
+	background:url(Images/punto.png) no-repeat left 6px;
+	padding:0 0 10px 7px;
+}
+
+.links li a {
+	color:#008BCE;
+	text-decoration:none;
+	font-weight:bold;
+}
+
+.links li a:hover {
+	color:#008BCE;
+	text-decoration:underline;
+}
+
+.footer {
+	padding:0 10px 0 20px;
+	border-top:2px solid black;
+}
+
+.footer p{
+	text-align:center;
+}
+
+.footer a{
+	color:#008BCE;
+	text-decoration:none;
+	font-size:16px;
+	font-weight: bold;
+}
