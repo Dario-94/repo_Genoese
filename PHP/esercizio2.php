@@ -1,11 +1,3 @@
-<html>
-	<form method="get">
-		<input name="ribalta" type="text"></input> <br /> <br />
-		<input name="dividi" type="text"></input>
-		<input type="submit" value="Go"/>
-	</form>
-</html>
-
 <?php
 
 include "libreria.php";
@@ -20,28 +12,29 @@ class MyString{
 
 	}
 
-	public function ribaltastringa(){
+	public function ribalta(){
 
 		return ribaltastringa($this->testo);
 
 	}
 
-	public function dividistringa($s){
-
-			return array($prima, $terza);
+	public function dividi($s){
+			$inizio=strpos($this->testo, $s);
+			if($inizio > -1) {
+				$prima=substr($this->testo, 0, $inizio);
+				$terza=substr($this->testo, $inizio + strlen($s));
+				return array($prima, $terza);				
+			}
 
 		}
 
+	public function evidenzia($s){
+
+		$a = $this->dividi($s);
+		return $a[0] . "<b>" . $s . "</b>" . $a [1];
 	}
 
+	}
 
-
-$a = new MyString($_GET["ribalta"]);
-$b = new MyString($_GET["dividi"]);
-$stringadivisa->$s = dividistringa($_GET["dividi"]);
-
-echo $a->ribaltastringa();
-echo $stringadivisa[0];
-echo $stringadivisa[2];
 
 ?>
