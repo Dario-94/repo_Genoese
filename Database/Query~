@@ -151,9 +151,45 @@ Calcolare:
 -numero di comuni
 -superficie
 -lista delle sigle
+-densita
 di ogni regione
-SELECT regione.nome AS Regione, count(*) AS Province, sum(provincia.abitanti) AS Abitanti, sum(provincia.comuni) AS Comuni, round(sum(provincia.superficie)) AS Superficie, GROUP_CONCAT(sigla) FROM regione JOIN provincia ON provincia.regione = regione.id GROUP BY regione.id ORDER BY Superficie;
+SELECT regione.nome AS Regione, count(*) AS Province, sum(provincia.abitanti) AS Abitanti, sum(provincia.comuni) AS Comuni, round(sum(provincia.superficie)) AS Superficie, GROUP_CONCAT(sigla) AS Sigla, round(sum(provincia.abitanti)/sum(provincia.superficie)) AS Densita FROM regione JOIN provincia ON provincia.regione = regione.id GROUP BY regione.id ORDER BY Superficie;
 
+
+----------------------------------------------------------------------------------------------------------
+
+SELECT utente.cognome AS Cognome, stazione.nome, accesso.dataora AS Dataeora FROM accesso JOIN tornello ON accesso.tornello = tornello.id JOIN stazione ON tornello.stazione = stazione.id JOIN abbonamento ON accesso.abbonamento = abbonamento.id JOIN utente ON abbonamento.utente = utente.id WHERE utente.id = 1 ORDER BY accesso.dataora;
+
+----------------------------------------------------------------------------------------------------------
+
+SELECT utente.cognome AS Cognome, count(*) AS Accesso FROM accesso JOIN tornello ON accesso.tornello = tornello.id JOIN stazione ON tornello.stazione = stazione.id JOIN abbonamento ON accesso.abbonamento = abbonamento.id JOIN utente ON abbonamento.utente = utente.id WHERE accesso.esito = 0 GROUP BY utente.id;
+
+----------------------------------------------------------------------------------------------------------
+
+Estrarre il numero di passaggi epr ogni ora di natale 2014:
+SELECT hour(dataora) AS Ore, count(*) AS Accessi FROM accesso WHERE DATE(dataora) = "2014-12-25" GROUP BY Ore;
+
+---------------------------------------------------------------------------------------------------------
+
+Estrarre il numero di passaggi per ogni anno e mese
+SELECT year(dataora) AS Anno, month(dataora) AS Mese, count(*) AS Accessi FROM accesso GROUP BY Anno, Mese;
+
+---------------------------------------------------------------------------------------------------------
+
+Etrarre il numero di passaggi per ogni ora specificando quanti sono gli accessi positivi e quanti quelli negativi
+SELECT hour(dataora) AS Ore, count(*) AS Accessi, sum(esito) AS Granted, sum(not esito) AS Denied FROM accesso GROUP BY Ore;
+
+---------------------------------------------------------------------------------------------------------
+
+Estrarre:
+-nome della stazione,
+-numero del tornello,
+-numero di passaggi:
+SELECT stazione.nome AS Stazione, tornello.numero AS Tornello, count(*) FROM accesso JOIN tornello ON accesso.tornello = tornello.id JOIN stazione ON tornello.stazione = stazione.id GROUP BY stazione.id, tornello.id;
+
+---------------------------------------------------------------------------------------------------------
+
+SOCIAL NETWORK
 
 
 
