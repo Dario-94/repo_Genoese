@@ -195,6 +195,11 @@ SOCIAL NETWORK
 -media (0 + per post, con descrizione)
 -FANQ ai post(max 1 per utente)
 
+---------------------------------------------------------------------------------------------------------
+
+Creare una tabella
+CREATE TABLE utente (id int not null auto_increment primary key, login varchar(255) not null, password char(40) not null);
+
 
 
 

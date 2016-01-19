@@ -190,7 +190,10 @@ SELECT stazione.nome AS Stazione, tornello.numero AS Tornello, count(*) FROM acc
 ---------------------------------------------------------------------------------------------------------
 
 SOCIAL NETWORK
-
+-utente
+-post
+-media (0 + per post, con descrizione)
+-FANQ ai post(max 1 per utente)
 
 
 
