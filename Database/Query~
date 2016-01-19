@@ -125,6 +125,36 @@ SELECT COUNT(*) FROM abbonamento WHERE abbonamento.id = 2 and "2014-10-21" betwe
 
 ----------------------------------------------------------------------------------------------------------
 
+Numero di accessi dalla stazione XVIII Dicembre:
+SELECT count(*) FROM accesso JOIN tornello ON accesso.tornello = tornello.id WHERE tornello.stazione = 12
+
+----------------------------------------------------------------------------------------------------------
+
+Contare gli articoli per settore:
+SELECT settore, count(settore) from articolo GROUP BY settore;
+
+----------------------------------------------------------------------------------------------------------
+
+Contare gli articoli per settore. Calcolare anche il valore:
+SELECT settore, count(settore) AS Articoli, sum(round(prezzo*quantita,2)) AS Valore from articolo GROUP BY settore ORDER BY Valore;
+
+----------------------------------------------------------------------------------------------------------
+
+Contare gli articoli per settore. Calcolare anche il valore e il valore medio:
+SELECT settore, count(settore) AS Articoli, round(sum(prezzo*quantita)) AS Valore, round(sum(quantita*prezzo)/count(*)) AS Media from articolo GROUP BY settore ORDER BY Valore;
+
+----------------------------------------------------------------------------------------------------------
+
+Calcolare:
+-numero di province.
+-abitanti
+-numero di comuni
+-superficie
+-lista delle sigle
+di ogni regione
+SELECT regione.nome AS Regione, count(*) AS Province, sum(provincia.abitanti) AS Abitanti, sum(provincia.comuni) AS Comuni, round(sum(provincia.superficie)) AS Superficie, GROUP_CONCAT(sigla) FROM regione JOIN provincia ON provincia.regione = regione.id GROUP BY regione.id ORDER BY Superficie;
+
+
 
 
 
