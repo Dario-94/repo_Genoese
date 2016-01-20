@@ -10,7 +10,14 @@ if (isset($_POST["nfila"]) && isset($_POST["nposto"])){
 	$nfila=$_POST["nfila"];
 	$nposto=$_POST["nposto"];
 
+if (isset($_POST["libera"])){
+	$cinema->libera($nfila, $nposto);
+}
+
+if (isset($_POST["prenota"])){
 	$risultato=$cinema->prenota($nfila, $nposto);
+}
+
 }
 ?>
 
@@ -43,16 +50,18 @@ if (isset($_POST["nfila"]) && isset($_POST["nposto"])){
 		<?php endforeach; ?>
 	</select>
 
-	<input type="submit" value="prenota"></input>
+	<input type="submit" name="prenota" value="prenota"></input>
+	<input type="submit" name="libera" value="libera"></input>
+
 </form>
 
-<?php if($risultato == 0) : ?>
+<?php if($risultato === 0) : ?>
 	Il posto <?php echo $nfila; ?> - <?php echo $nposto; ?> e' stato prenotato con successo!!
 <?php endif; ?>
-<?php if($risultato == 1) : ?>
+<?php if($risultato === 1) : ?>
 	Il posto <?php echo $nfila; ?> - <?php echo $nposto; ?> e' gia' occupato!!
 <?php endif; ?>
-<?php if($risultato == -1) : ?>
+<?php if($risultato === -1) : ?>
 	Il posto <?php echo $nfila; ?> - <?php echo $nposto; ?> non e' valida!!
 <?php endif; ?>
 </body>

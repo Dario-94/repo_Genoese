@@ -89,6 +89,17 @@ class Platea {
 			return $prenotato;
 		}
 	}
+
+	public function libera($f, $p){
+		$prenotato =$this->isPrenotato($f, $p);
+		if($prenotato == 1){
+			unset($this->posti[$f][$p]);
+			//prenota il posto
+			return 0;
+		} else{
+			return $prenotato;
+		}
+	}
 }
 
 function queryCinema($n){
