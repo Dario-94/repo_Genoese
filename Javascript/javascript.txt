@@ -1,0 +1,28 @@
+Javascript:
+-Linguaggio Javascript è molto elastico
+-Non si rompe in caso di errore
+-Copy and paste spesso funziona
+-Librerie Open Source spesso fanno il loro dovere.
+
+JSFiddle-> utile per eseguire javascript
+Developer Tool Console
+Editor
+Browser
+JS engine
+
+Linguaggio di scripting orientato agli oggetti, utilizzato in web browser per pagine dinamiche e per migliorare la user interaction.
+
+Brendan Eich.
+Creatore del Javascript, ora CTO a Mozilla Corp.
+
+John Resig.
+
+Douglas Crockford.
+
+Nicholas C. Zakas.
+
+- codice inline 
+
+- blocco di codice nella pagina
+
+-javascript esterno
