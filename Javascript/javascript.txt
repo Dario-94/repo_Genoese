@@ -26,3 +26,55 @@ Nicholas C. Zakas.
 - blocco di codice nella pagina
 
 -javascript esterno
+
+var variabile = 5;
+
+variabili sono case sensitive (variabile != Variabile)
+
+è possibile assegnare ad una variabile il contenuto di un'altra variabile.
+es. mySecondVariable = myFirstVariable
+
+Array si definiscono in questo modo:
+var myArray = newArray()
+
+Typeof()--> stampi il tipo di variabile.
+
+new Date() stampa la data e l'ora in questo momento.
+
+All'interno di date possiamo passare parametri (anno,mese,giorno,ora,minuto,secondo,millisecondo).
+
+I metodi, eseguiti sulle istanze, si eseguono con questa struttura: oggetto.metodo();
+
+getDate()-> Ritorna il giorno del mese.
+getDay()-> Ritorno il giorno della settimana
+getFullYear()-> Ritorna l'anno
+getHours()-> Ritorna l'ora
+getMilliseconds()-> Ritorna i millisecondi
+getMinutes()-> Ritorna i minuti
+getSeconds()-> Ritorna i secondi
+
+Per ricavare i millisecondi da quando sono nato:
+var a = new Date(1994,7,18);
+var b = new Date();
+
+alert(b-a);
+
+var a = new Date();
+var b = new Date(1988,9,11);
+
+Per ricavare l'anno bisestile
+function bisestile(a){
+if ((a %4 == 0 && a % 100 != 0) || a %400 == 0){
+	console.log(a+" è bisestile");
+}
+	else{
+		console.log(a+" non è bisestile");
+	}
+}
+
+bisestile(b.getFullYear());
+bisestile(a.getFullYear());
+
+"use strict" 
+
+lo scope in javascript è il corpo della funzione, var è importantissimo da utilizzare.
