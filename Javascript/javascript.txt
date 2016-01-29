@@ -78,3 +78,133 @@ bisestile(a.getFullYear());
 "use strict" 
 
 lo scope in javascript è il corpo della funzione, var è importantissimo da utilizzare.
+
+Stampa "oggi è il 29 Gennaio, è venerdì!! Alle 10:00 va tutto bene!!"
+
+var today = new Date;
+
+var mesi = [
+"Gennaio",
+"Febbraio",
+"Marzo",
+"Aprile",
+"Maggio",
+"Giugno",
+"Luglio",
+"Agosto",
+"Settembre",
+"Ottobre",
+"Novembre",
+"Dicembre"
+];
+
+var giorni = [
+"Lunedì",
+"Martedì",
+"Mercoledì",
+"Giovedì",
+"Venerdì",
+"Sabato",
+"Domenica"
+];
+
+alert("oggi è il "+ today.getDate()+" "+ mesi[today.getMonth()]+", è "+ giorni[today.getDate()]+"!! alle "+ today.getHours()+" : "+ today.getMinutes()+" va tutto bene");
+
+Calcolatrice JS
+
+function calc(a,b,c){
+	if(c == "+"){
+  	return (a + b);
+  }
+  	else if (c == "-"){
+    	return (a - b);
+    }
+    else if (c == "*"){
+    	return (a * b);
+    }
+    else if (c == "/"){
+    	return (a / b);
+    }
+    else if (c == "%"){
+    	return (a % b);
+    }
+    else {
+    	return false;
+    }
+}
+
+alert(calc(52,107,'+'));
+
+Math.random() genera numeri casuali
+Math.ceil() arrotonda al numero successivo
+Math.sqrt(num) radice quadrata 
+Math.pow(base, esponente) potenza
+
+Per creare un nuovo oggetto utilizziamo il costruttore new 
+
+
+var person = new Object();
+person.name = "Dario"; //proprietà, ovvero aggiungo un campo all'istanza
+person.surname = "Genoese";
+person.getFullName = function(){
+	return this.name+" "+this.surname;
+}
+console.log(
+	person.getFullName()
+);
+
+
+Calcolare l'area di un triangolo.
+var triangolo = new Object();
+triangolo.l1 = 15;
+triangolo.l2 = 10;
+triangolo.l3 = 8;
+
+triangolo.Perimetro = function(){
+	return (this.l1 + this.l2 + this.l3)/2;
+}
+
+triangolo.CalcoloArea = function(){
+	return (Math.sqrt (
+  this.Perimetro() * (
+  	(this.Perimetro() - this.l1) * 
+    (this.Perimetro() - this.l2) * 
+    (this.Perimetro() - this.l3)))
+    )
+}
+   
+
+
+console.log(triangolo.CalcoloArea());
+
+
+function Person(name, surname, age){
+	this.name = name;
+  this.surname = surname;
+  this.age = age;
+}
+
+var person = new Person("Dario", "Genoese", 21);
+
+console.dir(person);
+
+Tramite prototype tutte le classi Person ereditano la funzione all'interno del prototype:
+  function Person(name, surname, age){
+    this.name = name;
+    this.surname = surname;
+    this.age = age;
+  }
+
+  Person.prototype = {
+    constructor: Person,
+    sayName: function(){
+      console.log(this.name+" "+this.surname);
+    },
+    getAge: function(){
+      return this.age;
+    }
+  }
+  
+  var p1 = new Person("Dario", "Genoese", 21);
+  
+  console.dir(p1);
