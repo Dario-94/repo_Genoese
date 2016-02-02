@@ -1,0 +1,191 @@
+*{
+	max-height: 100%;
+}
+
+a{
+	text-decoration:none;
+	color:#FFF;
+}
+
+h1{
+	color:#FFF;
+	text-align:center;
+}
+.header{
+	background-color: black;
+}
+
+.menu{
+	background-color: white;
+	list-style: none;
+}
+
+.menu li {
+	display: inline;
+	margin: 50px;
+	font-weight: bold;
+	font-size: 26px;
+	color: #FFF;
+	position: relative;
+	top: -90px;
+	left: 420px;
+}
+
+.menu li a:hover{
+	font-size:32px;
+}
+
+.content{
+	background-color:#C6C6C6;
+	height:75%;
+	position: relative;
+	top:-70px;
+}
+
+.form1{
+	background-color:black;
+	padding:10px;
+	width:300px;
+	height:90%;
+	position:relative;
+	top:15px;
+	left:60px;
+}
+
+.title1{
+	color:#FFF;
+	font-weight:bold;
+	text-align:center;
+	font-size:22px;
+}
+
+.textbox1{
+	position: relative;
+	left:13%;
+	top:15px;
+	height:35px;
+	width:230px;
+	font-weight:bold;
+}
+
+.textbox1:focus{
+	background-color:#000;
+	color:#FFF;
+	font-weight: bold;
+	border:4px solid #FFF;
+}
+
+.title2{
+	color:#FFF;
+	font-weight:bold;
+	text-align:center;
+	font-size:22px;
+	margin-top:40px;
+}
+
+.textbox2{
+	position: relative;
+	left:13%;
+	top:15px;
+	height:35px;
+	width:230px;
+	font-weight:bold;
+}
+
+.textbox2:focus{
+	background-color:#000;
+	color:#FFF;
+	font-weight: bold;
+	border:4px solid #FFF;
+}
+
+.title3{
+	color:#FFF;
+	font-weight:bold;
+	text-align:center;
+	font-size:22px;
+	margin-top:40px;
+}
+
+.textbox3{
+	position: relative;
+	left:13%;
+	top:15px;
+	height:100px;
+	width:230px;
+	font-weight:bold;
+}
+
+.textbox3:focus{
+	background-color:#000;
+	color:#FFF;
+	font-weight: bold;
+	border:4px solid #FFF;
+}
+
+.image{
+	position:relative;
+	left:380px;
+	bottom:518px;
+	width:20px;
+	height:517px;
+}
+
+.footer{
+	height:200px;
+	background-color:#000;
+	position:relative;
+	top:-100px;
+}
+
+.list{
+	color:#FFF;
+	list-style-type:none;
+	position:relative;
+	left:70px;
+	top:10px;
+}
+
+.list li{
+	margin:30px;
+}
+
+.list li a{
+	font-size:16px;
+}
+
+span{
+	font-size:24px;
+	color:#FFF;
+}
+
+.list2{
+	position:relative;
+	left:250px;
+	top:-190px;
+}
+
+.list2 li{
+	margin:30px;
+}
+
+.button
+{
+	border: 2px solid #FFF;
+	background-color:black;
+	margin-bottom:10px;
+	margin-top:30px;
+	margin-left:58%;
+	height:30px;
+	position:relative;
+	top:10px;
+	right:28%;
+}
+
+.buttonlink{
+	font-size:22px;
+	font-weight:bold;
+	position:relative;
+	left:37px;
+	top:1px;
+}

@@ -208,3 +208,202 @@ Tramite prototype tutte le classi Person ereditano la funzione all'interno del p
   var p1 = new Person("Dario", "Genoese", 21);
   
   console.dir(p1);
+
+  Determinare se un numero è primo
+  function prime(num){
+  if (num <= 0 || num == 1){
+    return false;
+  }
+  for(var i = 2; i < num; i++){
+    if (num % i == 0)
+      return false;
+    }
+    else {
+      return true;
+    }
+}
+
+var a = new Object(); //per creare oggetti si usa o questo modo qua.
+a.name = "Dario"; //proprietà di un oggetto
+a.age = 21;
+
+var b = { //Altro modo per creare oggetti, o modo LITERAL.
+  nome: "Dario", //proprietà dell'oggetto
+  age: 21 //proprietà dell'oggetto
+}
+
+console.log(a.constructor);
+
+var c = {
+  proprietà...
+  proprietà...
+  Full Name : function (){ //metodo dell'istanza
+
+  }
+}
+
+var cane = { //creazione dell'oggetto
+  name = "Whysky", //proprietà dell'oggetto
+  verso:function(){ //metodo
+    alert("bau");
+  }
+}
+
+alert(cane.verso());
+
+function Cane(name){ //dichiariamo una funzione cane
+  this.name = name; //proprietà
+  this.verso = function(){ //metodo
+    return "Bau";
+  }
+}
+
+var Lucky = new Cane("Lucky"); //tramite il new la function istanzia oggetti 
+var Polpetta = new Cane("Polpetta");
+
+variabile == null? "ciao":"miao"; //costrutto ternario
+
+Esempio:
+function Dog(name, callback){
+  this.name = name?name:"Lucky"; //se c'è il nome passo 
+                                 //il nome oppure gli viene attribuito Lucky
+  this.verso = callback?callback:function(){
+    console.log("bau");
+  }
+}
+
+var Lucky = new Dog();
+
+var Toby = new Dog("Toby");
+
+var Lord = new Dog("Lord", function(){
+    alert("Buongiorno Madame");
+  }
+);
+
+console.log(Lucky.verso);
+console.log(Toby.verso);
+console.log(Lord.verso);
+
+Trovare area del cerchio e del quadrato
+function FormaGeometrica(){
+  this.CalcolaArea = function(){
+    //boh
+  }
+}
+
+function Quadrato(l1){
+  this.l1 = l1;
+  this.CalcolaArea = function(){
+    return (this.l1 * this.l1);
+  }
+}
+
+function Cerchio(r){
+  this.r = r;
+  this.pi = Math.PI;
+  this.CalcolaArea = function(){
+    return (this.r * this.r * this.pi);
+  }
+}
+
+var f = new FormaGeometrica();
+var q = new Quadrato(4);
+var c = new Cerchio(5);
+
+console.log(q.CalcolaArea());
+console.log(c.CalcolaArea());
+
+Altro esempio:
+function FormaGeometrica(){
+  this.CalcolaArea = function(){
+    if(this.hasOwnProperty('pi')){
+      return this.r * this.r * this.pi;
+    }
+      else{
+        return this.l1 * this.l1;
+      }
+  }
+}
+
+function Quadrato(l1){
+  this.l1 = l1;
+  /*this.CalcolaArea = function(){
+    return (this.l1 * this.l1);
+  }*/
+}
+
+function Cerchio(r){
+  this.r = r;
+  this.pi = Math.PI;
+  /*this.CalcolaArea = function(){
+    return (this.r * this.r * this.pi);
+  }*/
+}
+
+Cerchio.prototype = new FormaGeometrica();
+Quadrato.prototype = new FormaGeometrica();
+
+var q = new Quadrato(4);
+var c = new Cerchio(5);
+var f = new FormaGeometrica();
+
+console.log(q.CalcolaArea());
+console.log(c.CalcolaArea());
+console.log(f.CalcolaArea());
+
+Array:
+function SuperMegaArray(){
+  this.Array = new Array();
+  
+  this.Counter = 0;
+  
+  this.AddElem = function(num){
+      this.array.push(num);
+      this.counter = this.counter.lenght;
+  }
+  
+  this.Sort = function(){
+    this.array.sort(function(a,b){
+      return a - b;
+      }
+    );
+  }
+  
+  this.Del = function(){
+    this.Array.pop();
+    this.Counter = this.Counter.lenght;
+  }
+  
+  this.Media = function(){
+    var somma = 0
+    for(var i = 0; i < this.Counter - 1; i++){
+      somma = somma + this.Array[i];
+    }
+      return somma/this.Counter;
+  }
+  
+  this.toString = function(){
+    var stringa = "";
+    for (var i = 0; i < this.Counter; i++){
+      stringa + = this.Array[i] + "-";
+    }
+    return stringa;
+  }
+  }
+    
+ var a = new SuperMegaArray();
+ 
+ for(var i = 0; i < 10; i++){ //ciclo for
+  a.AddElem(10*i);
+ }
+ 
+  for(var i = 0; i < 5; i++){ //ciclo for
+  a.del();
+ }
+ 
+ a.Media();
+ 
+ a.Sort();
+ 
+ console.dir(a.toString());
