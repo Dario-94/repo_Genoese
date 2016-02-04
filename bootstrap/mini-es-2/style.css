@@ -1,0 +1,64 @@
+body{
+	font-weight: bold;
+
+}
+
+.row{
+	height: 100px;
+}
+
+.one{
+	background-color: #333;
+}
+
+.two{
+	background-color: #444;
+}
+
+.three{
+	background-color: #555;
+}
+
+.four{
+	background-color: #666;
+}
+
+.five{
+	background-color: #777;
+}
+
+.nopadding{
+	padding: 0px;
+}
+
+.six{
+	background-color: #888;
+}
+
+.seven{
+	background-color: #999;
+}
+
+.eight{
+	background-color: #AAA;
+}
+
+.nine{
+	background-color: #BBB;
+}
+
+.ten{
+	background-color: #CCC;	
+}
+
+.eleven{
+	background-color: #222;
+}
+
+.size{
+	height:100px;
+	color: #FFF;
+	font-size: 22px;
+}
+
+
