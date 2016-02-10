@@ -1,0 +1,20 @@
+Fortemente tipizzato ogni variabile deve avere un tipo.
+Libri:
+Thinking in Java,B.Eckel
+Concetti di informatica e fondamenti di java 2, Apogeo.
+Da terminale utilizzare javac nome file per creare il file da eseguire, dopo aver creato il file .class usare sempre via terminale java nome file senza estensione per eseguire il file.
+
+//def classe Hello
+public class Hello{
+	/**def metodo main
+	*ENTRY POINT [la JVM parte da qua]
+	*riceve in input delle stringhe (testo)
+	*per ora imparare (poi capiremo)
+	*/
+
+	public static voi main (String[] args){
+		//richiede stampa a out default
+		System.out.println("Hello World!");
+	}
+}
+
