@@ -1,0 +1,58 @@
+Passaggi laravel:
+1. Installare composer: 
+curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
+
+2. Installare laravel:
+sudo composer global require "laravel/installer=~1.1"
+export PATH="$PATH:$HOME/.composer/vendor/bin"
+
+3. Creare un nuovo progetto:
+laravel new ari
+
+4. Creare controller con i metodi RESTful (show, create, edit, destroy...):
+php artisan make:controller ControllerArticle --resource 
+
+5. Creare delle rotte che si ricollegano a questi controller:
+Route::resource('nome', 'NomeController');
+
+6. Comando per controllare la lista delle routes:
+php artisan route:list
+
+7. Creiamo una prima pagina di index all'interno delle views che viene richiamata dal
+controller con funzione index.
+
+8. Creiamo la migrazione che serve a popolare la tabella:
+php artisan make:migration create_articles_table --create="articles"
+
+9. Accediamo al file della migrazione e cominciamo a popolare la tabella.
+
+10. Prima di creare la tabella bisogna fare il collegamento al DB:
+nano .env e impostiamo il nome del DB, lo user e la pass.
+
+11. Avviamo il server mysql:
+sudo service mysql start.
+
+12. Runniamo la migrazione creata:
+php artisan migrate.
+
+13. Creiamo la tabella:
+php artisan make:model article
+
+14. Proteggiamo la tabella tramite i fillable.
+
+15. Creiamo una cartella layout dove inseriamo il master blade.
+Es. new folder layout - new file master.blade.php.
+
+17 Estendiamo il master blade in index ed in create.
+@extends('layout.master').
+
+18. Modifichiamo il file app.php con le stringhe di laravelcollective.
+
+19.. Ora creiamo la vista dove inseriamo il form.
+Es. create.blade.php sotto article.
+
+
+
+
+
+
