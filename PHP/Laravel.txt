@@ -51,6 +51,23 @@ Es. new folder layout - new file master.blade.php.
 19.. Ora creiamo la vista dove inseriamo il form.
 Es. create.blade.php sotto article.
 
+20. Tramite questa funzione salviamo e visualizziamo tutti gli articoli.
+ public function store(Request $request)
+    {
+        $input = $request->all();
+        Article::create($input);
+        return redirect('article');
+    }
+
+21. Creiamo una vista per il singolo articolo all'interno di article e utilizziamo il controller show.
+public function show($id)
+    {
+        $article = Article::find($id);
+        
+        return view('article.show')->withArticles($article);
+    }.
+22.
+
 
 
 
