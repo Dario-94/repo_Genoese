@@ -1,0 +1,60 @@
+@import url(https://fonts.googleapis.com/css?family=Karla);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
+
+.header{
+	position:relative;
+}
+
+.header img{
+	background-image: url(png/header.png);
+	height:250px;
+}
+
+.header p{
+	font-family:'Open Sans', sans-serif;
+	font-size:30px;
+	color:#00a989;
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%, -50%);
+	margin:0 -50% 0 0; 
+}
+
+.container{
+	font-family: 'Karla', sans-serif;
+	font-size: 15px;
+}
+
+.container a{
+	color:#00a989;
+	font-weight:600;
+}
+
+.margin-top-bottom{
+	margin-top:20px;
+	margin-bottom:40px;
+}
+
+.margin-top{
+	margin-top:15px;
+}
+
+.footer a{
+	text-decoration:overline;
+}
+
+.margin-top-50{
+	margin-top:50px;
+}
+
+.modal{
+	height: 600px;
+}
+
+.modal-title{
+	color:#00a989;
+	font-weight: 600;
+}
+
+
