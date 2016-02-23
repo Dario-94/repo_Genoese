@@ -12,20 +12,22 @@
 	<div class="container">
 		<div class="row">
   			<div class="col-md-12">
-  				<form>
   					<div class="form-group">
-  						<textarea class="form-control" rows="3" placeholder="What's on your mind"></textarea>
+  						<textarea class="form-control" rows="3" placeholder="What's on your mind" maxlength="140" name="bomber"></textarea>
   					</div>
-  						<a type="button" class="btn btn-primary pull-right">Post</a>
+  						<button id="button" class="btn btn-primary pull-right" disabled>Post</button>
   						<p class="counter pull-right">140</p>
-  				</form>
   			</div>
 		</div>
 
 		<div class="row">
   			<div class="col-md-12">
-  				<ul class="posts">
-  				</ul>
+  				<div class="posts">
+            <ul>
+
+
+            </ul>
+  				</div>
   			</div>
   		</div>
 	</div>
