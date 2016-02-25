@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Ufficio{
 	Impiegato[] impiegati 
 
@@ -13,4 +15,15 @@ public class Ufficio{
     public int getStipendioImpiegato(int i){
     	return impiegati[i].getSalario();
     }
+
+    public void stampaUfficio(){
+		for (int i = 0; i < impiegati.length; i++) {
+			
+		}
+	}
+
+	public static void main (String[] args){
+    Scanner tastiera = new Scanner(System.in);
+
+	}
 }
