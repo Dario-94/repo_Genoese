@@ -7,11 +7,27 @@ body, html{
 body{
 	background-image:url(../img/background.jpg);
 	background-size: 100% 100%;
-	color:#FFF;
 }
 
 .wrapper{
 	padding-top:150px;
 }
+
+#id1{
+	color:#FFF;
+}
+
+#id2{
+	color:#FFF;
+}
+
+#id3{
+	margin-top:15px;
+}
+
+#id4{
+	margin-top:15px;
+}
+
 	
 

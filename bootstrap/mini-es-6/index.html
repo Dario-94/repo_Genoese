@@ -4,20 +4,31 @@
 	<title>Index</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2-rc.1/css/select2.min.css" rel="stylesheet" />
 </head>
 <body>
 	<div class="wrapper"></div>
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-7" id="left">
-				<h1>Mio Sito!!</h1>
-				<p>Mio sito!!!</p>
+				<h1 id="id1">Mio Sito!!</h1>
+				<p id="id2">Mio sito!!!</p>
 			</div>
   			<div class="col-sm-5" id="right">
   				<form method="post" id="bomber">
 					<div class="form-group">
 					  	<label for="Input1"></label>
 	    				<input type="text" class="form-control" id="Input1" placeholder="First name" required>
+	    			<div id="id3">
+						<select class="form-control"id="status" multiple="multiple">
+						<option value="status" >--status--</option>
+						</select>
+					</div>
+					<div id="id4">
+						<select class="form-control" id="gender" placeholder="gender" multiple="multiple">
+						<option value="gender"> --gender--</option>
+						</select>
+					</div>
 	    				<label for="Input2"></label>
 	    				<input type="text" class="form-control" id="Input2" placeholder="Last name" required>
 					    <label for="Email1"></label>
@@ -29,8 +40,8 @@
 	    			</div>
 	    				<textarea class="form-control" rows="3" placeholder="Some text" id="Input5" required></textarea>
 	    				<br>
-	    				<button type="submit" class="btn btn-success" id="button">Send!</button>
-	    				<!--<a href="#" class="btn btn-success" id="button">Send!</a>-->
+	    				<!--<button type="submit" class="btn btn-success" id="button">Send!</button>-->
+	    				<a href="#" class="btn btn-success" id="button">Send!</a>
 					</div>
 				</form>
 			</div>
@@ -39,5 +50,6 @@
 <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/script.js"></script>
+<script src="assets/vendor/dist/js/select2.min.js"></script>
 </body>
 </html>

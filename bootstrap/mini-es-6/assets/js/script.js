@@ -1,4 +1,43 @@
 $(document).ready(function(){
+	var status = $('#status').val();
+
+	var selectiOption = {
+		"status":{
+			0:"stundent",1:"employed",2:"unemployed"
+		},
+		"gender":{
+			3:"male",4:"female",5:"other"
+		}
+	}
+
+
+//primo each mi posiziono su status e su gender
+	$.each( selectiOption, function( key, value ) {
+	//sul secondo each vado a vedere cosa ce dentro a status e gender quindi (0:student ,1:employed)
+		$.each(value, function(secondKey ,secondValue){
+			if(key=="status"){
+				$('#status').append($('<option>',{
+					value: secondKey,
+					text: secondValue
+				}));
+			}
+			if(key=="gender"){
+				$('#gender').append($('<option>',{
+					value: secondKey,
+					text: secondValue
+				}));
+			}
+		})
+	});
+
+	$("#gender").select2();
+
+	$("#status").select2();
+
+	$('select').select2({
+  		placeholder: 'Select an option'
+	});
+
 	function isEmail(email){
 		var $email = $('#Email1'); //change form to id or containment selector
 		var re = /[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}/igm;
@@ -26,7 +65,7 @@ $(document).ready(function(){
 		console.log(param);
 		console.log(key);
 
-		$.ajax({
+		/*$.ajax({
 			type: "POST",
  			url: "https://mandrillapp.com/api/1.0/messages/send.json",
   			data: {
@@ -40,15 +79,19 @@ $(document).ready(function(){
   			}
 		}).done(function (response){
 			console.log('sono la risposta'+response);
-		});
+		});*/
 	}
 
-	$('#bomber').on('submit', function(){
+	$('#button').click(function(){
 
 		var key = "zY4amYJtRK9aaLvrMbiI4A";
 
 		var name = $('#Input1').val();
 		console.log(name);
+		var status = $('#status').val();
+		console.log(status);
+		var gender = $('#gender').val();
+		console.log(gender);
 		var lName = $('#Input2').val();
 		console.log(lName);
 		var email = $('#Email1').val();
@@ -60,7 +103,7 @@ $(document).ready(function(){
 		var textarea = $('#Input5').val();
 		console.log(textarea);
 
-		if(name != "" && lName != "" && email != "" && company != "" && phone != "" && textarea != "" && IsNumeric(phone) && isEmail(email)){
+		if(name != "" && lName != "" && status != "" && gender != "" && email != "" && company != "" && phone != "" && textarea != "" && IsNumeric(phone) && isEmail(email)){
 			var param = {
 				"message":{
 					"from_email":email,
